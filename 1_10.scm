@@ -21,6 +21,8 @@
 
 (define (h n) (A 2 n)) ; (A (- 2 1) (A 2 (- n 1))) -> (A 1 (A 2 (-n 1))) -> 2^(A 2 (- n 1))
                        ; -> 2 ^ 2 ^ (A 2 (-n 1)), until (= n 0)
-                       ; therefore, f(n) = 2^2^2...^2, n times, for all n >= 0
+                       ; therefore,
+                       ; f(n) = 2^2^2...^2, n times, for all n > 1, if n = 0, f(n) =0, if n = 1 f(n) = 2
 
 (define (k n) (* 5 n n)) ; f(n) = 5n^2
+
